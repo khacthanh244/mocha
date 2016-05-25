@@ -1,0 +1,12 @@
+"use strict";
+const environment_1 = require('../config/environment');
+const dbmongo_1 = require('../config/db/dbmongo');
+const dbelestris_1 = require('../config/db/dbelestris');
+const dbredis_1 = require('../config/db/dbredis');
+const dbmysql_1 = require('../config/db/dbmysql');
+const mongoApp = dbmongo_1.dbApp(environment_1.default), mongoLog = dbmongo_1.dbLog(environment_1.default), elastic = dbelestris_1.dbelasticsearch(environment_1.default), redis = dbredis_1.default(environment_1.default), mysqlSms = dbmysql_1.default(environment_1.default);
+exports.mongoApp = mongoApp;
+exports.mongoLog = mongoLog;
+exports.elastic = elastic;
+exports.redis = redis;
+exports.mysqlSms = mysqlSms;
